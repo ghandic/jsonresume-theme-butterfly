@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+    resume:
+        container_name: resumed
+        build: .
+        working_dir: /working
+        volumes:
+            - ./:/working
+        ports:
+            - 4000:4000
+        # entrypoint: bash run.sh
+        entrypoint: bash export.sh

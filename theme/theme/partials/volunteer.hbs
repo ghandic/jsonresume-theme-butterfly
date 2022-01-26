@@ -1,0 +1,20 @@
+{{#if resume.volunteer.length}}
+<section class="section">
+  <section id="volunteer">
+    {{#each resume.volunteer}}
+    <section class="volunteer-item">
+      <div class="item">
+        <h3 class="central-title">{{type}}</h3>
+        {{#if highlights.length}}
+        <ul class="highlights">
+          {{#each highlights}}
+          <li>{{paragraphSplit .}}</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </div>
+    </section>
+    {{/each}}
+  </section>
+</section>
+{{/if}}

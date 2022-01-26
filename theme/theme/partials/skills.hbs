@@ -1,0 +1,41 @@
+{{#if resume.skills.length}}
+<section class="section">
+	<section id="skills">
+		
+
+		<h3 class="central-title">Skills & Characteristics</h3>
+		<br>
+
+		<div class="characteristic">
+			{{#each resume.skills}}
+			{{#ifCond type "characteristic" }}
+			<div class="characteristic-item">
+				{{#if name}}
+				<h3 class="name">
+					{{name}}
+				</h3>
+				{{/if}}
+				{{#if description}}
+				<p class="description">
+					{{description}}
+				</p>
+				{{/if}} 
+			</div>
+			{{/ifCond}}
+			{{/each}}
+		</div>
+
+		<div id="pd-wrapper">
+			<h3 class="central-title">Professional Development</h3>
+			<br>
+			<div class="pd">
+				{{#each resume.skills}}
+				{{#ifCond type "professional development" }}
+				<div class="pd-item">{{name}}</div>
+				{{/ifCond}}
+				{{/each}}
+			</div>
+		</div>
+	</section>
+</section>
+{{/if}}

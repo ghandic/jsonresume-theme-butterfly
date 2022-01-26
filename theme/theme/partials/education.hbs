@@ -1,0 +1,87 @@
+{{#if resume.education.length}}
+<section class="section">
+  <header>
+    <h2 class='section-title'>Education</h2>
+  </header>
+
+  <section id="education">
+    {{#each resume.education}}
+    <section class="work-item">
+      
+      <div class="left">
+					{{#if startDate}}
+					<span class="startDate">{{MY startDate}}</span>
+					{{/if}}
+					{{#if endDate}}
+					<span class="endDate">- {{MY endDate}}</span>
+					{{else}}
+					<span class="endDate">- Current</span>
+					{{/if}}
+          
+      </div>
+      <div class="dot"></div>
+      <div class="right">
+        {{#if studyType}}
+          <div class="studyType">
+            {{studyType}}
+          </div>
+          {{/if}}
+          {{#if area}}
+          <div class="area">
+            {{area}}
+          </div>
+          {{/if}}
+          {{#if institution}}
+          <div class="institution">
+            {{institution}}
+          </div>
+        {{/if}}
+
+        
+
+        {{#location}} |
+        <span class="location">
+          <span class="fas fa-map-marker-alt"></span>
+          {{#if city}}
+          <span class="city">{{city}}, </span>
+          {{/if}}
+          {{#if countryCode}}
+          <span class="countryCode">{{countryCode}}</span>
+          {{/if}}
+          {{#if region}}
+          <span class="region">{{region}}</span>
+          {{/if}}
+        </span>
+        {{/location}}
+  
+        {{#if gpa}}
+        <div class='gpa'>
+          <strong> Classification:</strong> <span>{{gpa}}</span>
+        </div>
+        {{/if}}
+
+        {{#if courses.length}}
+        
+        <ul class="highlights">
+          <strong>Placements</strong>
+          {{#each courses}}
+          <li>{{.}}</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+
+        <div class="item">
+          
+          {{#if summary}}
+          <div class="summary">{{paragraphSplit summary}}</div>
+          {{/if}}
+        </div>
+      </div>
+
+
+      
+    </section>
+    {{/each}}
+  </section>
+</section>
+{{/if}}
