@@ -6,6 +6,14 @@
 
 ## Getting started
 
+### Using Docker
+
+To create a pdf simply run the docker-compose file, if you wish to serve as a development webpage then change to `run.sh` in the `docker-compose.yaml`
+
+```bash
+docker-compose up
+```
+
 ### Install the command line
 
 Create your resume in json on [jsonresume](https://jsonresume.org)
